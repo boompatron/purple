@@ -1,6 +1,6 @@
 package org.example.springboot.domain.posts;
 
-import org.example.springboot.domain.post.PostRepository;
+import org.example.springboot.domain.post.PostsRepository;
 import org.example.springboot.domain.post.Posts;
 import org.junit.After;
 import org.junit.Test;
@@ -11,14 +11,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.awt.*;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PostsRepositoryTest {
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postRepository;
 
     @After
     public void cleanUp(){
