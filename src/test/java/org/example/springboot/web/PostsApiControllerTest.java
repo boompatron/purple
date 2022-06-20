@@ -38,10 +38,11 @@ public class PostsApiControllerTest {
 
     @Test
     public void Posts_Register() throws Exception{
-        String title = "test_title";
-        String content = "test_content";
+        String title = "title";
+        String content = "content";
         PostsSaveRequestsDto requestsDto = PostsSaveRequestsDto.builder()
-                        .title(title).content(content).author("test_author").build();
+                        .title(title).content(content).author("author").build();
+
         String url = "http://localhost:" + port + "/api/v1/posts";
 
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestsDto, Long.class);

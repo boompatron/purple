@@ -8,15 +8,15 @@ import org.example.springboot.domain.post.Posts;
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestsDto {
-    private String author;
     private String title;
     private String content;
+    private String author;
 
     @Builder
     public PostsSaveRequestsDto(String title, String content, String author){
-        this.author = author;
         this.title = title;
         this.content = content;
+        this.author = author;
     }
 
     public Posts toEntity(){
