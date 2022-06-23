@@ -39,4 +39,10 @@ public class PostsService {
     public List<PostsListsResponseDto> findAllDesc(){
         return postsRepository.findAllDesc().stream().map(PostsListsResponseDto::new).collect(Collectors.toList());
     }
+
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("no such user, id : " + id));
+        postsRepository.delete(posts);
+    }
 }
