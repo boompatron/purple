@@ -1,6 +1,6 @@
 # Project exclude paths
-# testing_3
+# testing_4
 .gradle
 .idea
-# application-oauth.properties
-*.properties
+src/main/resources/application-oauth.properties
+# *.properties
